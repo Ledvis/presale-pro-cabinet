@@ -1,3 +1,3 @@
-console.log('It works');
+import navigation from './navigation';
 
-let test;
+navigation.init();

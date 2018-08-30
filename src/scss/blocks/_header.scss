@@ -1,0 +1,115 @@
+.header {
+  position: relative;
+  background: url("/img/pattern-bg.png") repeat center;
+  background-size: 142px 82px;
+  overflow: hidden;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: -77px;
+    right: -18px;
+    background: url("/img/header-mask-1@mb.png") no-repeat center;
+    background-size: cover;
+    width: 202px;
+    height: 212px;
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    bottom: -675px;
+    left: (-320px + 112px);
+    background: url("/img/header-mask-2@mb.png") no-repeat center;
+    background-size: cover;
+    width: 320px;
+    height: 734px;
+  }
+
+  &__wrapper {
+    @include container;
+    position: relative;
+    padding: 295px 20px 88px;
+
+    &::after {
+      content: "";
+      position: absolute;
+      z-index: 1;
+      bottom: 0;
+      left: 20px;
+      width: 1400px;
+      height: 11px;
+      border-top-left-radius: 5px;
+      border: 1px solid rgb(150, 126, 189);
+      background-color: rgb(255, 255, 255);
+    }
+  }
+
+  &__title {
+    margin: 0 0 10px;
+    color: rgb(24, 22, 22);
+    font-family: $main-font;
+    font-size: 28px;
+    font-weight: 700;
+    line-height: 30px;
+  }
+
+  &__descr {
+    margin: 0 0 27px;
+    color: rgb(24, 22, 22);
+    font-family: $main-font;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 24px;
+  }
+
+  &__img {
+    position: absolute;
+    top: 58px;
+    right: 0;
+    width: 255px;
+    height: 213px;
+  }
+
+  &__btn {
+    display: inline-flex;
+    width: 182px;
+    font-size: 18px;
+    line-height: 18px;
+    font-weight: 300;
+  }
+}
+
+@include media-min($desktop-width) {
+  .header {
+    &::before {
+      width: 693.1px;
+      height: 571px;
+      background: url("/img/header-mask.svg") no-repeat center;
+      background-size: cover;
+    }
+
+    &__wrapper {
+      padding: 30px 110px 137px 110px;
+
+      &::after {
+        width: 3000px;
+        border-bottom-color: white;
+        border-right-color: white;
+      }
+    }
+
+    &__img {
+      top: 185px;
+      width: 578px;
+      height: 479px;
+    }
+
+    &__inner {}
+
+    &__btn {
+      width: 376px;
+      height: 72px;
+    }
+  }
+}

@@ -2,11 +2,13 @@
   width: auto;
   margin: 0 auto;
   box-sizing: border-box;
+
   @include media-min($tablet-width) {
     width: 768px;
   }
+
   @include media-min($desktop-width) {
-    width: 1170px;
+    width: 1400px;
   }
 }
 
@@ -14,6 +16,7 @@
   width: auto;
   margin: 0 auto;
   box-sizing: border-box;
+
   @media #{$tablet-width} {
     width: 75%;
   }
@@ -71,12 +74,14 @@
 @mixin aspect-ratio($width, $height) {
   position: relative;
   height: auto;
+
   &::before {
     display: block;
     content: "";
     width: 100%;
     padding-top: ($height / $width) * 100%;
   }
+
   &>img,
   &>video,
   &>div,
@@ -109,9 +114,11 @@
   background-color: transparent;
   border: none;
   cursor: pointer;
+
   &::-moz-focus-inner {
     border: none;
   }
+
   &:focus {
     outline: none;
   }
@@ -127,4 +134,8 @@
   @media only screen and (max-width: $width) {
     @content;
   }
+}
+
+@mixin linear {
+  transition: 0.35s all linear;
 }

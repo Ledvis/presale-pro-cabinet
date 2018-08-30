@@ -1,0 +1,20 @@
+.mask {
+  position: relative;
+  height: 70px;
+  background: url("/img/mask-bg@mb.png") repeat center;
+  background-size: cover;
+  border-top: 1px solid rgb(150, 126, 189);
+  border-bottom: 1px solid rgb(150, 126, 189);
+}
+
+@include media-min($desktop-width) {
+  .mask {
+    background: none;
+    border: none;
+
+    &::before {
+      content: "";
+      position: absolute;
+    }
+  }
+}

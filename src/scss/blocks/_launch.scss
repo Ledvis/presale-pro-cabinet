@@ -1,0 +1,171 @@
+.launch {
+  background: url("/img/pattern-bg.png") repeat center;
+  background-size: 142px 82px;
+  border-top: 1px solid rgb(150, 126, 189);
+  overflow: hidden;
+
+  &__wrapper {
+    @include container;
+    padding: 85px 20px 80px;
+  }
+
+  &__container {
+    position: relative;
+    margin-bottom: 55px;
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: -25px;
+      right: -20px;
+      bottom: -25px;
+      left: -20px;
+      background: url("/img/launch-mask@mb.png") no-repeat center;
+      background-size: cover;
+    }
+  }
+
+  &__title {
+    position: relative;
+    margin: 0 0 10px;
+    color: rgb(255, 255, 255);
+    font-family: $main-font;
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 30px;
+  }
+
+  &__descr {
+    position: relative;
+    margin: 0 0 25px;
+    color: rgb(255, 255, 255);
+    font-family: $main-font;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 18px;
+
+    &:last-of-type {
+      margin: 0 0 0 52%;
+      text-align: right;
+    }
+  }
+
+  &__btn {
+    position: relative;
+    width: 123px;
+    height: 40px;
+    margin-bottom: 55px;
+    color: rgb(101, 65, 163);
+    font-size: 12px;
+    font-weight: 700;
+    text-transform: uppercase;
+    background-color: rgb(255, 255, 255);
+  }
+
+  &__subtitle {
+    margin: 0 0 35px;
+    color: rgb(0, 0, 0);
+    font-family: $main-font;
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 24px;
+  }
+
+  &__navigation-list {
+    display: flex;
+    justify-content: space-between;
+    margin: 0 0 35px;
+    padding: 0;
+    list-style: none;
+  }
+
+  &__navigation-item {
+    position: relative;
+
+    &::before {
+      @include linear;
+      content: "";
+      position: absolute;
+      left: 0;
+      bottom: -3px;
+      width: 0;
+      height: 2px;
+      background-color: rgb(101, 65, 163);
+    }
+
+    &:hover,
+    &--active {
+      &::before {
+        width: 100%;
+      }
+    }
+
+    a {
+      color: rgb(0, 0, 0);
+      font-family: $main-font;
+      font-size: 16px;
+      font-weight: 500;
+      line-height: 16px;
+      text-decoration: none;
+    }
+  }
+
+  &__calendar {
+    margin-bottom: 40px;
+  }
+
+  &__item {
+    display: flex;
+    align-items: center;
+    min-height: 90px;
+    box-shadow: 4px 8px 9px rgba(88, 58, 138, 0.28);
+    border-radius: 10px;
+    border: 1px solid rgba(101, 65, 163, 0.3);
+    background-color: rgb(255, 255, 255);
+
+    &:not(:last-of-type) {
+      margin-bottom: 20px;
+    }
+  }
+
+  &__date {
+    flex: 0 0 96px;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+
+    b,
+    span {
+      color: rgb(0, 0, 0);
+      font-family: "SF Pro Display";
+      font-weight: 700;
+      text-transform: uppercase;
+    }
+
+    b {
+      font-size: 24px;
+    }
+
+    span {
+      font-size: 12px;
+    }
+  }
+
+  &__caption {
+    margin: 0 0 10px;
+    color: rgb(0, 0, 0);
+    font-family: $main-font;
+    font-size: 22px;
+    font-weight: 500;
+    line-height: 1;
+  }
+
+  &__text {
+    margin: 0;
+    color: rgb(0, 0, 0);
+    font-family: $main-font;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 18px;
+  }
+}

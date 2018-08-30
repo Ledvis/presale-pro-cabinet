@@ -1,23 +1,31 @@
 @font-face {
-  font-family: "Neo Sans Pro";
-  font-style: normal;
-  font-weight: 400;
-  src: local("Neo Sans Pro Regular"), local("NeoSansPro-Regular"), url("/fonts/NeoSansPro-Regular.ttf") format("truetype");
-  font-display: swap;
-}
-
-@font-face {
-  font-family: "Neo Sans Pro";
+  font-family: "SF Pro Display";
   font-style: normal;
   font-weight: 300;
-  src: local("Neo Sans Pro Light"), local("NeoSansPro-Light"), url("/fonts/NeoSansPro-Light.ttf") format("truetype");
+  src: local("SF Pro Display Light"), local("SF-Pro-Display-Light"), url("/fonts/SF-Pro-Display-Light.otf") format("opentype");
   font-display: swap;
 }
 
 @font-face {
-  font-family: "Neo Sans Pro";
+  font-family: "SF Pro Display";
+  font-style: normal;
+  font-weight: 400;
+  src: local("SF Pro Display Regular"), local("SF-Pro-Display-Regular"), url("/fonts/SF-Pro-Display-Regular.otf") format("opentype");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "SF Pro Display";
   font-style: normal;
   font-weight: 500;
-  src: local("Neo Sans Pro Bold"), local("NeoSansPro-Bold"), url("/fonts/NeoSansPro-Bold.ttf") format("truetype");
+  src: local("SF Pro Display Medium"), local("SF-Pro-Display-Medium"), url("/fonts/SF-Pro-Display-Medium.otf") format("opentype");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "SF Pro Display";
+  font-style: normal;
+  font-weight: 700;
+  src: local("SF Pro Display Bold"), local("SF-Pro-Display-Bold"), url("/fonts/SF-Pro-Display-Bold.otf") format("opentype");
   font-display: swap;
 }

@@ -1,0 +1,19 @@
+.logo {
+  @include linear;
+  width: 86px;
+  height: 16px;
+  fill: rgb(101, 65, 163);
+
+  &--fill-white {
+    width: 96px;
+    height: 17px;
+    fill: white;
+  }
+}
+
+@include media-min($desktop-width) {
+  .logo {
+    width: 199px;
+    height: 36px;
+  }
+}
